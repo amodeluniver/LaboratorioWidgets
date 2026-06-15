@@ -7,13 +7,13 @@ plugins {
 android {
     namespace = "com.example.laboratoriowidgets"
 
-    // Configuración del SDK del sistema operativo Android para el cual se compila la app
-    compileSdk = 35
+    // CORREGIDO: Subimos a 36 para que coincida con los requisitos mínimos de las librerías modernas descargadas
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.laboratoriowidgets"
         minSdk = 26 // Asegura compatibilidad total con las funciones nativas de Widgets avanzados
-        targetSdk = 35
+        targetSdk = 36 // Ajustado a 36 para ir de la mano con el compileSdk
         versionCode = 1
         versionName = "1.0"
 
@@ -42,7 +42,6 @@ android {
     }
 }
 
-// ESTA ES LA FORMA MODERNA QUE REEMPLAZA A KOTLINOPTIONS
 // Configura las opciones del compilador de Kotlin para usar Java 11 de manera uniforme
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
     compilerOptions {
